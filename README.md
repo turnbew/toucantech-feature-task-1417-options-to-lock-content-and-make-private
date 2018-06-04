@@ -1,40 +1,39 @@
-TASK DATE (MEDIUM): 14.03.2018 - FINISHED: 15.03.2018
+FOR PRIVACY AND CODE PROTECTING REASONS THIS IS A SIMPLIFIED VERSION OF CHANGES AND NEW FEATURES
 
+TASK DATE : 14.03.2018 - FINISHED: 15.03.2018
 
-TASK SHORT DESCRIPTION: 1417 [
-								"Option to lock content (news articles and resources that are tagged to clubs and marked as 'private'):
-								*Add a checkbox (""Hide resource from resources"") to resources that hides the resource from the resources page. 
-									Add an info icon to this to explain ""Ticking this option will hide the resource from the public resources page. 
-									This is useful if you wish to only show the resource to a tagged club.""
-								*Add 'Private content' checkbox to the clubs edit form.
-								*If a resource or news is tagged to the club and 'private content' is selected,
-									A locked clubs page will show similar to how they are while logged out 
-									(but with tagged resources and news articles hidden) - asking a user to join"
-							]
+TASK'S LEVEL: (MEDIUM)
 
-							Summarized task
+TASK SHORT DESCRIPTION: [
+				"Option to lock content (news articles and resources that are tagged to clubs and marked as 'private'):
+				*Add a checkbox (""Hide resource from resources"") to resources that hides the resource from the resources page. 
+					Add an info icon to this to explain ""Ticking this option will hide the resource from the public resources page. 
+					This is useful if you wish to only show the resource to a tagged club.""
+				*Add 'Private content' checkbox to the clubs edit form.
+				*If a resource or news is tagged to the club and 'private content' is selected,
+					A locked clubs page will show similar to how they are while logged out 
+					(but with tagged resources and news articles hidden) - asking a user to join"
+			]
+			
+			Summarized task
 
-							1. I need to create a new option to the resources edit/create form: "club only resource"
+			1. I need to create a new option to the resources edit/create form: "club only resource"
 
-							2. If this option is ticked: in that case resource can not be seen for everyone on the /resources page, but can be seen (for example) 
-							   on /clubs/view/entrepreneurs for everyone.
+			2. If this option is ticked: in that case resource can not be seen for everyone on the /resources page, but can be seen (for example) 
+			   on /clubs/view/entrepreneurs for everyone.
 
-							3. I need to create a new option to the clubs edit/create form: "private content" 
+			3. I need to create a new option to the clubs edit/create form: "private content" 
 
-							4. If this option is ticked, in that case resources and news can be seen just for club members on /clubs/view/entrepreneurs as well.
+			4. If this option is ticked, in that case resources and news can be seen just for club members on /clubs/view/entrepreneurs as well.
 
 							
 GITHUB REPOSITORY CODE: feature/task-1417-options-to-lock-content-and-make-private
-
-
-ORIGINAL WORK: https://github.com/BusinessBecause/network-site/tree/feature/task-1417-options-to-lock-content-and-make-private
-
 
 CHANGES
  
 	IN FILES:
 		
-		\network-site\addons\default\modules\clubs\controllers\clubs.php
+		clubs.php
 		
 			ADDED CODE: 
 			
@@ -55,7 +54,7 @@ CHANGES
 	
 	
 	
-		\network-site\addons\default\modules\resources\models\resources_m.php
+		resources_m.php
 		
 			CHANGED CODE: 
 			
@@ -73,7 +72,7 @@ CHANGES
 					
 					
 	
-		\network-site\addons\default\modules\network_settings\controllers\content.php
+		content.php
 			
 			ADDED CODE: 
 			
@@ -85,7 +84,7 @@ CHANGES
 	
 	
 	
-		\network-site\addons\default\modules\network_settings\views\content\clubs_form.php
+		clubs_form.php
 		
 			ADDED CODE: 
 			
@@ -105,7 +104,7 @@ CHANGES
 	
 	
 	
-		\network-site\addons\default\modules\network_settings\views\content_resources\resources_form.php
+		resources_form.php
 	
 			ADDED CODE: 
 			
@@ -127,7 +126,7 @@ CHANGES
 
 	
 	
-		\network-site\addons\default\modules\network_settings\controllers\content_resources.php
+		content_resources.php
 	
 			CHANGED CODE FROM careers project: 
 			
@@ -154,7 +153,7 @@ CHANGES
 	
 	
 	
-		\network-site\addons\default\modules\network_settings\details.php
+		details.php
 		
 			ADDED CODE: 
 				
@@ -173,7 +172,7 @@ CHANGES
 				
 		
 		
-		FROM CAREERS PROJECT: \network-site\addons\default\modules\careers\details.php
+		details.php
 
 			private function _get_records_to_careers_setup_table() 
 			{
